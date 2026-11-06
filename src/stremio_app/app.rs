@@ -47,7 +47,7 @@ use super::stremio_server::{ServerEvent, StremioServer};
 const WEBUI_RETRY_DELAYS_SECS: [u64; 2] = [2, 5];
 const WEBUI_READY_TIMEOUT_SECS: u64 = 30;
 const WEBUI_RETRY_READY_TIMEOUT_SECS: u64 = 15;
-const WEBUI_UNREACHABLE: &str = "Stremio couldn't load its interface. \
+const WEBUI_UNREACHABLE: &str = "Bizarreio couldn't load its interface. \
     Check your internet connection, VPN or firewall, then click Retry.";
 
 pub enum WebUiEvent {
@@ -603,7 +603,7 @@ impl MainWindow {
             self.splash_screen.hide();
             nwg::modal_error_message(
                 &self.window,
-                "Cannot load Stremio Web UI",
+                "Cannot load Bizarreio Web UI",
                 &error.to_string(),
             );
         } else {
@@ -652,7 +652,7 @@ impl MainWindow {
         let choice = nwg::modal_message(
             &self.window,
             &nwg::MessageParams {
-                title: "Stremio",
+                title: "Bizarreio",
                 content: details,
                 buttons: nwg::MessageButtons::RetryCancel,
                 icons: nwg::MessageIcons::Error,
@@ -713,12 +713,12 @@ impl MainWindow {
                     self.splash_screen.hide();
                     self.on_show();
                     let content = format!(
-                        "Stremio's local streaming server is unavailable.\n\n{details}\n\nChoose Retry to start the server again, or Cancel to exit Stremio."
+                        "Bizarreio's local streaming server is unavailable.\n\n{details}\n\nChoose Retry to start the server again, or Cancel to exit Bizarreio."
                     );
                     let choice = nwg::modal_message(
                         &self.window,
                         &nwg::MessageParams {
-                            title: "Stremio server",
+                            title: "Bizarreio server",
                             content: &content,
                             buttons: nwg::MessageButtons::RetryCancel,
                             icons: nwg::MessageIcons::Error,

@@ -417,8 +417,8 @@ fn create_mpv(window_handle: HWND) -> Mpv {
             };
         }
         set_property!("wid", window_handle as i64);
-        set_property!("title", "Stremio");
-        set_property!("audio-client-name", "Stremio");
+        set_property!("title", "Bizarreio");
+        set_property!("audio-client-name", "Bizarreio");
         set_property!("media-controls", "yes");
         set_property!("audio-fallback-to-null", "yes");
         set_property!("terminal", "yes");

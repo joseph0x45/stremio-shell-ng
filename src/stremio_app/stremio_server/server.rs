@@ -30,9 +30,9 @@ impl StremioServer {
 
 fn server_command() -> Result<Command, String> {
     super::job::protect_shell()
-        .map_err(|error| format!("Cannot supervise Stremio child processes: {error}"))?;
+        .map_err(|error| format!("Cannot supervise Bizarreio child processes: {error}"))?;
     let mut path = env::current_exe()
-        .map_err(|error| format!("Cannot locate the Stremio installation: {error}"))?;
+        .map_err(|error| format!("Cannot locate the Bizarreio installation: {error}"))?;
     path.pop();
     let mut command = Command::new(path.join("stremio-runtime.exe"));
     command
