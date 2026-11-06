@@ -47760,7 +47760,7 @@
             });
         } catch (err) {}
         console.log("Using app path -> " + appPath), enginefs.router.use((function(req, res, next) {
-            process.env.NO_CORS || !req.headers.origin || req.headers.origin.match(".strem.io(:80)?$") || req.headers.origin.match(".stremio.net(:80)?$") || req.headers.origin.match(".stremio.com(:80)?$") || req.headers.origin.match("stremio-development.netlify.app(:80)?$") || req.headers.origin.match("stremio.github.io(:80)?$") || req.headers.origin.match("gstatic.com") || "https://stremio.github.io" === req.headers.origin || "http://127.0.0.1:8080" === req.headers.origin || req.headers.origin.match("(127.0.0.1|localhost):11470$") || req.headers.origin.match("peario.xyz") ? enginefs.sendCORSHeaders(req, res, next) : next();
+            process.env.NO_CORS || !req.headers.origin || req.headers.origin.match(".strem.io(:80)?$") || req.headers.origin.match(".stremio.net(:80)?$") || req.headers.origin.match(".stremio.com(:80)?$") || req.headers.origin.match("stremio-development.netlify.app(:80)?$") || req.headers.origin.match("stremio.github.io(:80)?$") || req.headers.origin.match("gstatic.com") || "https://stremio.github.io" === req.headers.origin || "http://127.0.0.1:8080" === req.headers.origin || "https://joseph0x45.github.io" === req.headers.origin || req.headers.origin.match("(127.0.0.1|localhost):11470$") || req.headers.origin.match("peario.xyz") ? enginefs.sendCORSHeaders(req, res, next) : next();
         }));
         var settings = __webpack_require__(107);
         if (enginefs.router.use("/embedded-ass", __webpack_require__(864)()), !process.env.HLS_V2_DISABLED) {
