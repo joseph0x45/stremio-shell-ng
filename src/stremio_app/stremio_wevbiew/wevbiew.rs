@@ -265,7 +265,7 @@ impl PartialUi for WebView {
                                     }
                                 }, true);
                                 }}catch(e){}
-                            window.addEventListener("load", function() {if(initShellComm) try { initShellComm() } catch(e) {}}, false)
+                            window.addEventListener("load", function() {if(typeof initShellComm === 'function') try { initShellComm() } catch(e) {}}, false)
 
                             "##, |_| Ok(())).expect("Cannot add script to webview");
                             Ok(())
